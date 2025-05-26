@@ -1,51 +1,55 @@
 <template>
-  <header class="absolute top-0 left-0 w-full z-50 bg-transparent text-white">
+  <header class="fixed top-0 left-0 w-full bg-black text-white z-50 flex items-center justify-between p-4 md:px-8">
 
-    <div class="flex justify-between items-center p-6 lg:px-12">
+    <!-- Gauche : Lien Accueil -->
+    <a href="#accueil" @click.prevent="scrollToSection('#accueil')"
+      class="text-white text-lg uppercase font-light tracking-wide font-inter">
+      Accueil
+    </a>
 
-      <!-- Mobile Toggle Button -->
-      <div class="md:hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-        <button @click="isMenuOpen = !isMenuOpen"
-          class="w-14 h-14 flex items-center justify-center rounded-full bg-black/10 backdrop-blur-md text-black text-4xl shadow-lg">
-          <Icon :icon="isMenuOpen ? 'material-symbols:close' : 'material-symbols:menu'" />
-        </button>
-      </div>
-
-
-      <!-- Nav Links -->
-      <nav :class="[
-        'left-1/2 w-[280px] p-6 flex flex-col items-center gap-6 shadow-md md:flex-row md:gap-16 md:p-0',
-        isMenuOpen ? 'flex fixed top-[90px] -translate-x-1/2 bg-black/20 backdrop-blur-md rounded-lg' : 'hidden',
-        'md:static md:w-auto md:bg-transparent md:backdrop-blur-0 md:shadow-none md:flex md:translate-x-0 md:left-auto md:max-w-full md:rounded-none'
-      ]">
-
-
-
-
-        <a href="#lappartement" @click.prevent="scrollToSection('#lappartement')"
-          class="relative text-black font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">L'Appartement</a>
-        <a href="#equipements" @click.prevent="scrollToSection('#equipements')"
-          class="relative text-black font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">Equipements</a>
-        <a href="#faq" @click.prevent="scrollToSection('#faq')"
-          class="relative text-black font-light uppercase text-xl after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[1px] after:bg-black after:transition-all after:duration-300 hover:after:w-full">FAQ</a>
-      </nav>
-
-      <!-- Logo -->
-      <!-- <div class="text-3xl text-red-500 font-bold">LOGO</div> -->
-
-      <!-- Réserver Button -->
-      <a href="#contact"
-        class="hidden md:inline-block text-black border border-black px-6 py-2 text-lg font-light cursor-pointer bg-transparent rounded-none hover:bg-white hover:text-black transition">
-        Je réserve
-      </a>
-
+    <!-- Centre : Logo -->
+    <div class="text-white text-2xl font-light tracking-widest uppercase font-inter">
+      Glint
     </div>
+
+    <!-- Droite : Menu Burger -->
+    <button @click="isMenuOpen = !isMenuOpen"
+      class="w-20 h-10 flex items-center justify-center cursor-pointer transition-all duration-300 z-60">
+      <template v-if="!isMenuOpen">
+        <div class="flex flex-col justify-center items-center space-y-1">
+          <span class="w-10 h-[2px] bg-gray-400"></span>
+          <span class="w-10 h-[2px] bg-gray-400"></span>
+        </div>
+      </template>
+      <template v-else>
+        <span class="text-lg uppercase font-light tracking-widest font-inter">Fermer</span>
+      </template>
+    </button>
+
   </header>
+
+  <!-- Menu Mobile fullscreen sous la navbar -->
+  <nav v-if="isMenuOpen"
+    class="fixed top-0 left-0 w-screen h-screen bg-black text-gray-700 flex flex-col justify-center items-center space-y-12 font-inter text-xl md:text-7xl font-normal tracking-widest z-40 pt-16">
+
+    <a href="#accueil" @click.prevent="scrollToSection('#accueil')" class="hover:text-white">
+      Accueil
+    </a>
+    <a href="#about" @click.prevent="scrollToSection('#about')" class="hover:text-white">
+      À propos
+    </a>
+    <a href="#services" @click.prevent="scrollToSection('#services')" class="hover:text-white">
+      Services
+    </a>
+    <a href="#contact" @click.prevent="scrollToSection('#contact')" class="hover:text-white">
+      Contact
+    </a>
+
+  </nav>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { Icon } from '@iconify/vue'
 
 const isMenuOpen = ref(false)
 

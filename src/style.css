@@ -9,16 +9,26 @@
 }
 
 p {
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
-  color: #000000;
 }
+
+h1 {
+  font-family: 'Bebas neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
 h2 {
   font-family: 'Lora', sans-serif;
   line-height: 1.5;
-  color: #000000;
-  font-weight: 400;
+  font-weight: 300;
 }
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
 
 @keyframes myAnim {
   0% {

@@ -1,10 +1,8 @@
 <template>
   <Navbar />
 
-  <main class="bg-neutral-200 mx-auto space-y-20">
+  <main class="bg-black mx-auto space-y-20">
     <Hero />
-    <Images />
-    <Marquee />
     <ImageTextSection />
     <FullWidthSlider />
     <Map />
@@ -20,8 +18,6 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
 import Hero from './components/Hero.vue'
-import Images from './components/Images.vue'
-import Marquee from './components/Marquee.vue'
 import ImageTextSection from './components/ImageTextSection.vue'
 import FullWidthSlider from './components/FullWidthSlider.vue'
 import Map from './components/Map.vue'
