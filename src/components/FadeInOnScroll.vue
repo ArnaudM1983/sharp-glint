@@ -1,43 +1,38 @@
 <template>
-    <div ref="container" :class="{ 'fade-in-up': isVisible }">
-      <slot />
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref, onMounted, onUnmounted } from 'vue'
-  
-  const container = ref(null)
-  const isVisible = ref(false)
-  
-  onMounted(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        isVisible.value = true
-        observer.disconnect()
-      }
-    }, { threshold: 0.1 })
-  
-    if (container.value) observer.observe(container.value)
-  
-    onUnmounted(() => observer.disconnect())
-  })
-  </script>
-  
-  <style scoped>
-  @keyframes myAnim {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
+  <div ref="container">
+    <slot />
+  </div>
+</template>
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+import { gsap } from 'gsap'
+
+const container = ref(null)
+
+let observer = null
+
+onMounted(() => {
+  observer = new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      gsap.to(container.value, {
+        opacity: 1,
+        y: 0,
+        duration: 2,
+        ease: "power3.out"
+      })
+      observer.disconnect()
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  }, { threshold: 0.1 })
+
+  if (container.value) {
+    // Initial state before animation
+    gsap.set(container.value, { opacity: 0, y: 50 })
+    observer.observe(container.value)
   }
-  
-  .fade-in-up {
-    animation: myAnim 2s ease 0s 1 normal forwards;
-  }
-  </style>
-  
+})
+
+onUnmounted(() => {
+  if (observer) observer.disconnect()
+})
+</script>

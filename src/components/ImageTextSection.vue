@@ -2,6 +2,8 @@
 import plage from '@/assets/plage.png'
 import deco from '@/assets/deco.png'
 import plage2 from '@/assets/plage2.png'
+import FadeInOnScroll from '@/components/FadeInOnScroll.vue'
+
 </script>
 
 <template>
@@ -9,9 +11,11 @@ import plage2 from '@/assets/plage2.png'
   <section>
     <div class="mx-auto max-w-[1250px] px-4 py-8 sm:px-6 lg:px-0">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-start md:gap-24">
-        <div class="md:order-1">
-          <p class="text-zinc-300 text-left text-xl md:text-2xl uppercase font-light">à propos de moi</p>
-        </div>
+        <FadeInOnScroll>
+          <div class="md:order-1">
+            <p class="text-zinc-300 text-left text-xl md:text-2xl uppercase font-light">à propos de moi</p>
+          </div>
+        </FadeInOnScroll>
         <div class="md:order-2">
           <div class="max-w-lg md:max-w-none text-left">
             <p class="text-zinc-300 text-xl md:text-2xl font-extralight">

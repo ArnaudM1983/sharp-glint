@@ -38,8 +38,8 @@
     <a href="#about" @click.prevent="scrollToSection('#about')" class="hover:text-white">
       À propos
     </a>
-    <a href="#services" @click.prevent="scrollToSection('#services')" class="hover:text-white">
-      Services
+    <a href="#projets" @click.prevent="scrollToSection('#projets')" class="hover:text-white">
+      Projets
     </a>
     <a href="#contact" @click.prevent="scrollToSection('#contact')" class="hover:text-white">
       Contact
