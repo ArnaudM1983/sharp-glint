@@ -6,8 +6,6 @@
     <ImageTextSection />
     <Projects />
     <CtaSection />
-   
-    <ScrollingBanner />
     <Footer />
   </main>
 </template>
@@ -18,6 +16,5 @@ import Hero from './components/Hero.vue'
 import ImageTextSection from './components/ImageTextSection.vue'
 import Projects from './components/Projects.vue'
 import CtaSection from './components/CtaSection.vue'
-import ScrollingBanner from './components/ScrollingBanner.vue'
 import Footer from './components/Footer.vue'
 </script>

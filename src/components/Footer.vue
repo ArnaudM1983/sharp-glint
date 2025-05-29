@@ -1,51 +1,28 @@
 <template>
     <footer>
-        <div class="mx-auto max-w-[1250px] py-16 px-4 md:px-0">
-            <div class="flex flex-col items-center gap-4 rounded-lg shadow-lg sm:flex-row sm:justify-between pb-10">
-                <h2 class="text-3xl md:text-6xl font-semibold text-white sm:text-3xl text-left">
-                    Prêt à réserver ?
-                </h2>
-                <a href="#contact"
-                    class="text-white border border-white px-6 py-2 text-lg font-light cursor-pointer bg-transparent rounded-none hover:bg-white hover:text-black transition">
-                    Je réserve
-                </a>
-            </div>
-
+        <div class="mx-auto max-w-[1250px] py-8 px-4 md:px-0">
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
-                <div class="lg:col-span-8 text-center sm:text-left lg:pr-24">
-                    <p class="text-lg font-medium text-gray-900 dark:text-white">Bienvenue dans votre havre de paix méditerranéen. Niché entre ciel et mer, notre appartement vous offre un cadre idéal pour vous ressourcer : vue imprenable sur la mer, mobilier naturel, lumière douce et ambiance apaisante. Que vous veniez en couple, en famille ou pour télétravailler au soleil, tout est pensé pour votre confort.</p>
-                </div>
-                <div class="lg:col-span-4 text-center sm:text-left">
-                    <ul class="space-y-4 text-sm">
+                <div class="lg:col-span-3 text-center sm:text-left lg:pr-24">
+                    <ul class="space-y-1 text-sm">
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                                href="#lappartement">
-                                L'Appartement
+                            <a class="text-white md:text-xl" href="#lappartement">
+                                CONTACT
                             </a>
                         </li>
 
                         <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                            <a class="text-zinc-500 transition hover:text-white md:text-xl uppercase"
                                 href="#equipements">
-                                Equipements
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                                href="#faq">
-                                Questions Fréquentes
+                                contact@glint.com
                             </a>
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="mt-16">
-                <ul class="flex justify-center gap-6 sm:justify-end">
-                    <li>
+                <div class="lg:col-span-2 text-center sm:text-left lg:pr-24">
+                    <div class="text-white md:text-xl mb-2">SOCIAL</div>
+                    <div class="flex space-x-4 justify-center sm:justify-start">
                         <a href="#" rel="noreferrer" target="_blank"
-                            class="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75">
+                            class="text-zinc-500 transition hover:text-white ">
                             <span class="sr-only">Facebook</span>
                             <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -53,11 +30,9 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                    </li>
 
-                    <li>
                         <a href="#" rel="noreferrer" target="_blank"
-                            class="text-teal-700 transition hover:text-teal-700/75 dark:text-teal-500 dark:hover:text-teal-500/75">
+                            class="text-zinc-500 transition hover:text-white ">
                             <span class="sr-only">Instagram</span>
                             <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd"
@@ -65,15 +40,46 @@
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 text-center sm:text-right">
+                    <ul class="space-y-4 text-sm">
+                        <li>
+                            <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
+                                href="#lappartement">
+                                Accueil
+                            </a>
+                        </li>
 
-                <div class="mt-16 sm:flex sm:items-center sm:justify-between">
-                    <p class="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right dark:text-gray-400">
-                        Copyright &copy; 2025. Mentions légales - Politique de confidentialité
-                    </p>
+                        <li>
+                            <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
+                                href="#equipements">
+                                à propos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
+                                href="#faq">
+                                Projets
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+
+            <div class="items-center mt-24">
+                <h2 class="md:text-[20vw] font-semibold text-white text-center uppercase">
+                    sharp glint
+                </h2>
+            </div>
+
+            <div class="mt-16 sm:flex sm:items-center sm:justify-between">
+                <p class="mt-4 text-center text-sm text-gray-500 sm:mt-0 sm:text-right dark:text-gray-400">
+                    Copyright &copy; 2025. Mentions légales - Politique de confidentialité
+                </p>
+            </div>
+
         </div>
     </footer>
 </template>

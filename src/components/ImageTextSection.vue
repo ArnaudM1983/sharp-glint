@@ -7,7 +7,6 @@ import FadeInOnScroll from '@/components/FadeInOnScroll.vue'
 </script>
 
 <template>
-  <!-- Image à gauche et Texte à droite sur desktop -->
   <section>
     <div class="mx-auto max-w-[1250px] px-4 py-8 sm:px-6 lg:px-0">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-start md:gap-24">
