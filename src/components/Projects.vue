@@ -1,5 +1,5 @@
 <template>
-    <section ref="sectionRef" class="relative min-h-screen bg-black overflow-x-hidden isolate">
+    <section ref="sectionRef" class="relative min-h-screen bg-black overflow-x-hidden isolate" id="projets">
         <!-- H2 animé en fond -->
         <transition name="fade-slide" appear>
             <h2 v-if="showTitle"

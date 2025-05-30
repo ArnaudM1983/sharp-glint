@@ -1,4 +1,5 @@
 <template>
+  <section id="contact">
     <div
       ref="container"
       class="relative w-full h-screen overflow-hidden"
@@ -28,6 +29,7 @@
         <a href="" class="button text-white">Contactez-moi</a>
       </div>
     </div>
+  </section>
   </template>
   
   <script>

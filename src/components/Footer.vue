@@ -46,21 +46,21 @@
                     <ul class="space-y-4 text-sm">
                         <li>
                             <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
-                                href="#lappartement">
+                                href="/">
                                 Accueil
                             </a>
                         </li>
 
                         <li>
                             <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
-                                href="#equipements">
+                                href="#about">
                                 à propos
                             </a>
                         </li>
 
                         <li>
                             <a class="text-zinc-500 transition hover:text-white uppercase md:text-xl"
-                                href="#faq">
+                                href="projets">
                                 Projets
                             </a>
                         </li>

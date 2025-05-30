@@ -2,8 +2,8 @@
   <header class="fixed top-0 left-0 w-full bg-black text-white z-50 flex items-center justify-between p-4 md:px-8">
 
     <!-- Gauche : Lien Accueil -->
-    <a href="#accueil" @click.prevent="scrollToSection('#accueil')"
-      class="text-white text-lg uppercase font-light tracking-wide font-inter">
+    <a href="/"
+      class="text-white text-lg uppercase font-light tracking-wide font-inter hidden md:block">
       Accueil
     </a>
 
@@ -30,7 +30,7 @@
 
   <!-- Menu Mobile fullscreen sous la navbar -->
   <nav v-if="isMenuOpen"
-    class="fixed top-0 left-0 w-screen h-screen bg-black text-gray-700 flex flex-col justify-center items-center space-y-12 font-inter text-xl md:text-7xl font-normal tracking-widest z-40 pt-16">
+    class="fixed top-0 left-0 w-screen h-screen bg-black text-white md:text-gray-700 flex flex-col justify-center items-center space-y-12 font-inter text-xl md:text-7xl font-normal tracking-widest z-40 pt-16">
 
     <a href="#accueil" @click.prevent="scrollToSection('#accueil')" class="hover:text-white">
       Accueil
