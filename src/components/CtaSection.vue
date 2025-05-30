@@ -1,6 +1,6 @@
 <template>
   <section id="contact">
-    <div ref="container" class="relative w-full h-screen overflow-hidden" @mousemove="handleMouseMove">
+    <div ref="container" class="relative w-full h-screen overflow-hidden" @pointermove="handleMouseMove">
       <img v-for="(img, index) in images" :key="index" :src="img.src" :ref="el => imageRefs[index] = el"
         class="absolute object-cover opacity-70 pointer-events-none" :style="{
           width: isMobile ? reduceSize(img.baseStyle.width) : img.baseStyle.width,

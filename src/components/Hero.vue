@@ -66,7 +66,7 @@ onMounted(() => {
             delay: 1.5,
             onComplete: () => {
                 if (!isMobile.value) {
-                    gsap.set(titleRef.value, { x: 66 })
+                    gsap.set(titleRef.value, { x: 0.1 })
                     gsap.to(titleRef.value, {
                         x: '-30vw',
                         ease: 'none',

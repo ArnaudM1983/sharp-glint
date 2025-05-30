@@ -13,7 +13,7 @@
       <!-- Mobile layout -->
       <div
         v-if="isMobile"
-        class="relative z-10 px-4 pt-20 pb-100 flex flex-col gap-y-16"
+        class="relative z-10 px-4 pt-20 pb-100 flex flex-col gap-y-16 "
       >
         <div
           v-for="(project, index) in projects"
@@ -30,7 +30,7 @@
       <!-- Desktop layout -->
       <div
         v-else
-        class="relative z-10 max-w-[1300px] mx-auto flex flex-col pt-40 pb-100 gap-y-16 px-4"
+        class="relative z-10 max-w-[1300px] mx-auto flex flex-col pt-100 pb-100 gap-y-16 px-4"
       >
         <div
           v-for="(project, index) in projects"
@@ -116,7 +116,7 @@
       },
       {
         root: null,
-        threshold: 0.15
+        threshold: 0.09
       }
     )
   
