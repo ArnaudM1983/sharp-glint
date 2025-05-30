@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 left-0 w-full bg-black text-white z-50 flex items-center justify-between p-4 md:px-8">
+<header class="fixed top-0 left-0 w-full bg-black text-white z-50 flex items-center justify-between px-4 py-2 md:px-8 md:py-4">
 
     <!-- Gauche : Lien Accueil -->
     <a href="/"

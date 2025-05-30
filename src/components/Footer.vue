@@ -69,7 +69,7 @@
             </div>
 
             <div class="items-center mt-24">
-                <h2 class="md:text-[20vw] font-semibold text-white text-center uppercase">
+                <h2 class="text-[20vw] font-semibold text-white text-center uppercase">
                     sharp glint
                 </h2>
             </div>

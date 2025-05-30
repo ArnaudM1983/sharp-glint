@@ -50,52 +50,50 @@
   
   
   <script setup>
-  import { onMounted, ref } from 'vue'
-  import { gsap } from 'gsap'
-  import { ScrollTrigger } from 'gsap/ScrollTrigger'
-  import heroImage from '@/assets/hero.png'
-  
-  gsap.registerPlugin(ScrollTrigger)
-  
-  const titleRef = ref(null)
-  const isMobile = ref(false)
-  
-  onMounted(() => {
-    isMobile.value = window.innerWidth < 768
-  
-    if (!isMobile.value) {
-      // Animation d'entrée (desktop uniquement)
-      gsap.fromTo(
-        titleRef.value,
-        { opacity: 0, x: 1000 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1.5,
-          ease: 'power3.out',
-          delay: 1.5,
-          onComplete: () => {
-            gsap.set(titleRef.value, { x: 31 })
-            gsap.to(titleRef.value, {
-              x: '-30vw',
-              ease: 'none',
-              scrollTrigger: {
-                trigger: titleRef.value,
-                start: 'top center',
-                end: '+=500',
-                scrub: true,
-                // markers: true,
-              },
-            })
-          },
+import { onMounted, ref } from 'vue'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import heroImage from '@/assets/hero.png'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const titleRef = ref(null)
+const isMobile = ref(false)
+
+onMounted(() => {
+  isMobile.value = window.innerWidth < 768
+
+  // Animation d'entrée (desktop + mobile)
+  gsap.fromTo(
+    titleRef.value,
+    { opacity: 0, x: 1000 },
+    {
+      opacity: 1,
+      x: 0,
+      duration: 1.5,
+      ease: 'power3.out',
+      delay: 1.5,
+      onComplete: () => {
+        if (!isMobile.value) {
+          gsap.set(titleRef.value, { x: 31 })
+          gsap.to(titleRef.value, {
+            x: '-30vw',
+            ease: 'none',
+            scrollTrigger: {
+              trigger: titleRef.value,
+              start: 'top center',
+              end: '+=500',
+              scrub: true,
+              // markers: true,
+            },
+          })
         }
-      )
-    } else {
-      // Sur mobile, le titre apparait directement sans animation
-      gsap.set(titleRef.value, { opacity: 1, x: 0 })
+      },
     }
-  })
-  </script>
+  )
+})
+</script>
+
   
   <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
